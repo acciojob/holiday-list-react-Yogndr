@@ -38,7 +38,7 @@ const App = () => {
     <div id="main">
        <ol>
         {indianCities.map((city, index) => (
-          <Card key={`location${index + 1}`} city={city.name} />
+          <li key={`location${index + 1}`}>{city.name}</li>
         ))}
       </ol>
                {/* Do not remove the main div */}
