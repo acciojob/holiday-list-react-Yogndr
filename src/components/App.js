@@ -32,9 +32,15 @@ const App = () => {
     { name: 'Mount Abu', country: 'India' },
     { name: 'Tirupati', country: 'India' },
     ]
+    const indianCities = cityList.filter(city => city.country === "India");
     
   return (
     <div id="main">
+       <ol>
+        {indianCities.map((city, index) => (
+          <Card key={`location${index + 1}`} city={city.name} />
+        ))}
+      </ol>
                {/* Do not remove the main div */}
     </div>
   )
